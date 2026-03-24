@@ -1,8 +1,10 @@
+import IndexPage from './pages/IndexPage';
+import './styles/App.css';
+
 function App() {
   return (
     <>
-      <h1>New Site</h1>
-      <a href="https://legacy.coopericksen.com">Link to old site</a>
+      <IndexPage />
     </>
   )
 }
