@@ -52,5 +52,5 @@ p, a {
 }
 
 a {
-    color: var(--accent);
+    color: var(--text)
 }

@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import WelcomeBanner from '../components/WelcomeBanner';
 import ElementSizes from '../components/ElementSizes';
+import Footer from '../components/Footer';
 
 function IndexPage() {
     return (
@@ -9,6 +10,7 @@ function IndexPage() {
             <WelcomeBanner />
             <a href="https://legacy.coopericksen.com">Link to old site</a>
             <ElementSizes />
+            <Footer />
         </>
     )
 }
