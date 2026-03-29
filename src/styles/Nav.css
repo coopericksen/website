@@ -8,9 +8,9 @@ nav {
     gap: 2rem;
 }
 
-nav > * {
-    /* outline: 1px solid yellow; */
-}
+/* nav > * {
+    outline: 1px solid yellow;
+} */
 
 #nav-logo {
     height: 3rem;

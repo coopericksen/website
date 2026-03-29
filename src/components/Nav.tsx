@@ -10,6 +10,10 @@ function Nav() {
                 id="nav-logo-container" 
                 href="/"
 
+                initial={{ opacity: 0, y: -50}} 
+                whileInView={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5 } }} 
+                viewport={{ once: true }} 
+
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.95 }}
             >
@@ -20,6 +24,10 @@ function Nav() {
                 className="nav-link" 
                 href="/"
 
+                initial={{ opacity: 0, y: -50}} 
+                whileInView={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5 } }} 
+                viewport={{ once: true }} 
+
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.95 }}
             >Home</motion.a>
@@ -27,6 +35,10 @@ function Nav() {
             <motion.a 
                 className="nav-link" 
                 href="/tools"
+
+                initial={{ opacity: 0, y: -50}} 
+                whileInView={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.5 } }} 
+                viewport={{ once: true }} 
 
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.95 }}
@@ -36,6 +48,10 @@ function Nav() {
                 className="nav-link" 
                 href="/projects"
 
+                initial={{ opacity: 0, y: -50}} 
+                whileInView={{ opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.5 } }} 
+                viewport={{ once: true }} 
+
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.95 }}
             >Projects</motion.a>
@@ -43,6 +59,10 @@ function Nav() {
             <motion.a 
                 className="nav-link" 
                 href="/about"
+
+                initial={{ opacity: 0, y: -50}} 
+                whileInView={{ opacity: 1, y: 0, transition: { delay: 1, duration: 0.5 } }} 
+                viewport={{ once: true }} 
 
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.95 }}
