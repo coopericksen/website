@@ -3,18 +3,29 @@ nav {
     border-bottom: 2px solid var(--text);
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    align-items: stretch;
+    gap: 2rem;
 }
 
-nav a {
+/* nav > * {
+    outline: 1px solid yellow;
+} */
+
+#nav-logo {
+    max-height: 2rem;
+    cursor: pointer;
+}
+
+.nav-link {
     color: var(--text);
     text-decoration: none;
     position: relative;
     padding: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-nav a::after {
+.nav-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -31,7 +42,17 @@ nav a::after {
     box-shadow: 0 0 1rem var(--secondary);
 }
 
-nav a:hover::after {
+.nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 1rem;
+    }
+
+    #nav-logo-container {
+        display: none;
+    }
 }

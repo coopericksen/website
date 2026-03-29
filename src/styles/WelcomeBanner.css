@@ -1,21 +1,24 @@
-.header {
+.welcome-banner {
     background-color: var(--main);
     color: var(--text);
+    text-align: center;
 
-    border-radius: 0.5rem;
     max-width: 80vw;
     margin: 3rem auto;
     padding: 3rem;
 }
 
-.header-name {
+.welcome-banner-name {
+    text-decoration: none;
     color: var(--secondary);
     font-size: inherit;
     position: relative;
-    cursor: crosshair;
+    cursor: pointer;
+    display: inline-block;
+    font-size: clamp(2.2rem, 5vw, 4rem);
 }
 
-.header-name::after {
+.welcome-banner-name::after {
     content: '';
     position: absolute;
     left: 0;
@@ -30,6 +33,12 @@
     box-shadow: 0 0 1rem var(--secondary);
 }
 
-.header-name:hover::after {
+.welcome-banner-name:hover::after {
     transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+    .welcome-banner-name {
+        font-size: 1rem;
+    }
 }
