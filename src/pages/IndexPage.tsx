@@ -9,7 +9,7 @@ function IndexPage() {
             <Nav />
             <WelcomeBanner />
             <a href="https://legacy.coopericksen.com"><h3>Link to old site</h3></a>
-            {/* <ElementSizes /> */}
+            <ElementSizes />
             <Footer />
         </>
     )
