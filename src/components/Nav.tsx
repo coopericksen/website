@@ -67,7 +67,7 @@ function Nav() {
                         whileHover={{ scale: 1.2, y: -5 }}
                     >
                         {element.text}
-                        {element.logo ? <img id="nav-logo" src='./logo.png' alt="coopericksen's logo" /> : null}
+                        {element.logo ? <img id="nav-logo" src='/logo.png' alt="coopericksen's logo" /> : null}
                         
                     </motion.a>
                 )
