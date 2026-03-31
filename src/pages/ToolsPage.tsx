@@ -6,7 +6,6 @@ function ToolsPage() {
         <>
             <Nav />
             <h1>Tools</h1>
-            <a href="https://legacy.coopericksen.com"><h3>Link to old site</h3></a>
             <Footer />
         </>
     )
