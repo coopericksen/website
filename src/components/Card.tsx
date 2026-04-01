@@ -23,7 +23,7 @@ function Card(props: Project) {
             href={props.href}
 
             variants={card_motion}
-            whileHover={{ scale: 1.1, y: -5 }}
+            whileHover={{ scale: 1.05, y: -20, rotate: 2 }}
         >
             <h1>{props.title}</h1>
             <h5>{props.description}</h5>
