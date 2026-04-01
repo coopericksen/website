@@ -1,0 +1,9 @@
+.live-clock {
+    padding: 1rem;
+    background-color: var(--accent);
+
+    width: 60vw;
+    margin-inline: auto;
+    text-align: center;
+    padding: 1rem;
+}
