@@ -61,3 +61,9 @@ a {
 
     margin-inline: 4rem;
 }
+
+@media (max-width: 600px) {
+    .card-grid {
+      margin-inline: auto;
+    }
+}

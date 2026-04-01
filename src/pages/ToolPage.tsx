@@ -19,12 +19,14 @@ function ProjectPage() {
         );
     }
 
+    const Page = tool.component;
+
     return (
         <>
             <Nav />
 
             <h1>{toolId}</h1>
-            <p>{tool.title}</p>
+            <Page />
 
             <Footer />
         </>
