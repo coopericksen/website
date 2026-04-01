@@ -7,8 +7,8 @@ function WelcomeBanner() {
         <motion.section 
             className='welcome-banner'
 
-            initial={{ opacity: 0, y: -50 }} 
-            whileInView={{ opacity: 1, y: 0, transition: { delay: 1.2 } }} 
+            initial={{ scale: 0, y: -50 }} 
+            whileInView={{ scale: 1, y: 0, transition: { delay: 1.2 } }} 
             viewport={{ once: true }} 
         >
             <h1>Welcome to the website of <a className='welcome-banner-name' href="/about">
