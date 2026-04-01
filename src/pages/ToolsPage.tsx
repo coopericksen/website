@@ -1,4 +1,7 @@
+import { motion } from 'motion/react';
+
 import Nav from '../components/Nav';
+import Banner from '../components/Banner';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 
@@ -14,15 +17,32 @@ function ToolsPage() {
         )
     });
 
+    const card_container_motion = {
+        hidden: { y: -50 },
+        visible: { 
+            y: 0,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 1.4
+            }
+        },
+    };
+
     return (
         <>
             <Nav />
 
-            <h1>Tools</h1>
+            <Banner title="Tools" />
 
-            <section className='card-grid'>
+            <motion.section 
+                className='card-grid'
+                
+                variants={card_container_motion}
+                initial="hidden"
+                whileInView="visible"
+            >
                 {toolElements}
-            </section>
+            </motion.section>
 
             <Footer />
         </>
