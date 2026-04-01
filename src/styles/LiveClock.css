@@ -17,3 +17,18 @@
     color: var(--secondary);
     border: 2px solid var(--secondary);
 }
+
+.live-clock-div {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .live-clock {
+        padding: 1rem 2rem;
+    }
+
+    .live-clock-div {
+        flex-direction: column;
+    }
+}

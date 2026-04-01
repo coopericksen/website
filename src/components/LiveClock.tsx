@@ -55,8 +55,12 @@ function LiveClock() {
             variants={LiveClock_motion}
             whileHover={{ scale: 1.05, y: -20, rotate: 2}}
         >
-            <h3>Current Time:</h3>
-            <h4>{timeOutput} - {dateOutput}</h4>
+            <h3 className="live-clock-label">Current Time:</h3>
+
+            <div className="live-clock-div">
+                <h4 className="live-clock-time">{timeOutput}</h4>
+                <h4 className="live-clock-date">{dateOutput}</h4>
+            </div>
         </motion.div>
     )
 }
