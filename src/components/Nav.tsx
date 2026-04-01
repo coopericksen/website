@@ -61,6 +61,7 @@ function Nav() {
                     <motion.a 
                         className='nav-link'
                         href={element.href}
+                        id={element.text === "Home" ? "nav-home-link" : undefined}
                         
                         key={index}
                         variants={nav_link_motion}
