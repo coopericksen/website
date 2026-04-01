@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import Nav from '../components/Nav';
+import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 
 import toolsData from '../data/tools';
@@ -25,7 +26,7 @@ function ProjectPage() {
         <>
             <Nav />
 
-            <h1>{toolId}</h1>
+            <Banner title={tool.title} />
             <Page />
 
             <Footer />

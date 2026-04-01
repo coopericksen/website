@@ -1,7 +1,9 @@
+import LiveClock from "../../components/LiveClock";
+
 function Clock() {
     return (
         <>
-            <h1>Clock!!!</h1>
+            <LiveClock />
         </>
     )
 }
