@@ -1,11 +1,14 @@
 import Nav from '../components/Nav';
+import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 
 function AboutPage() {
     return (
         <>
             <Nav />
-            <h1>About</h1>
+
+            <Banner title="About" />
+
             <Footer />
         </>
     )
