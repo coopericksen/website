@@ -1,9 +1,15 @@
 .live-clock {
     padding: 1rem;
-    background-color: var(--accent);
+    background-color: var(--primary);
 
-    width: 60vw;
+    width: max-content;
     margin-inline: auto;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 5rem;
+    border-radius: 0.5rem;
+}
+
+.live-clock:hover {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
