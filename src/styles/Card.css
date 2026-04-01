@@ -1,0 +1,13 @@
+.card {
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    text-decoration: none;
+}
+
+.card:hover {
+    border: 2px solid var(--text);
+}

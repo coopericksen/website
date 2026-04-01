@@ -54,3 +54,16 @@ p, a {
 a {
     color: var(--text)
 }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    margin-inline: 4rem;
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+      margin-inline: auto;
+    }
+}

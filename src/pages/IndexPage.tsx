@@ -1,5 +1,6 @@
 import Nav from '../components/Nav';
 import WelcomeBanner from '../components/WelcomeBanner';
+import LiveClock from '../components/LiveClock';
 import Footer from '../components/Footer';
 
 function IndexPage() {
@@ -7,7 +8,7 @@ function IndexPage() {
         <>
             <Nav />
             <WelcomeBanner />
-            <a href="https://legacy.coopericksen.com"><h3>Link to old site</h3></a>
+            <LiveClock />
             <Footer />
         </>
     )
