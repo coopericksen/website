@@ -18,9 +18,9 @@ function ToolsPage() {
     });
 
     const card_container_motion = {
-        hidden: { y: -50 },
+        hidden: { opacity: 0 },
         visible: { 
-            y: 0,
+            opacity: 1,
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 1.4

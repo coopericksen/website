@@ -37,13 +37,22 @@ function LiveClock() {
     const timeOutput = new Date(time).toLocaleTimeString('en-US', { hour12: false }) + ":" + getMilliseconds();
     const dateOutput = new Date(time).toDateString();
 
+    const LiveClock_motion = {
+        hidden: {
+            scale: 0,
+            y: -50
+        },
+        visible: {
+            scale: 1,
+            y: 0
+        }
+    }
+
     return (
         <motion.div 
             className="live-clock"
 
-            initial={{ scale: 0, y: -50 }} 
-            animate={{ scale: 1, y: 0, transition: { delay: 1.4, duration: 0.2 } }}
-
+            variants={LiveClock_motion}
             whileHover={{ scale: 1.05, y: -20, rotate: 2}}
         >
             <h3>Current Time:</h3>
