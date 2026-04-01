@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { motion } from "motion/react";
 
 import '../styles/LiveClock.css';
 
@@ -37,10 +38,17 @@ function LiveClock() {
     const dateOutput = new Date(time).toDateString();
 
     return (
-        <div className="live-clock">
-            <h3>Current Time</h3>
+        <motion.div 
+            className="live-clock"
+
+            initial={{ scale: 0, y: -50 }} 
+            animate={{ scale: 1, y: 0, transition: { delay: 1.4, duration: 0.2 } }}
+
+            whileHover={{ scale: 1.05, y: -20, rotate: 2}}
+        >
+            <h3>Current Time:</h3>
             <h4>{timeOutput} - {dateOutput}</h4>
-        </div>
+        </motion.div>
     )
 }
 
