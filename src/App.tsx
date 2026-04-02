@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 
-import IndexPage from './pages/IndexPage';
-import ToolsPage from './pages/ToolsPage';
-import ToolPage from './pages/ToolPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ProjectPage from './pages/ProjectPage';
-import AboutPage from './pages/AboutPage';
+import IndexPage from './pages/Index';
+import ToolsPage from './pages/Tools';
+import ToolPage from './pages/Tool';
+import ProjectsPage from './pages/Projects';
+import ProjectPage from './pages/Project';
+import AboutPage from './pages/About';
+import NotFound from './pages/NotFound';
 
 import './styles/App.css';
 
@@ -22,6 +23,8 @@ function App() {
         <Route path="/projects/:projectId" element={<ProjectPage />} />
 
         <Route path="/about" element={<AboutPage />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
