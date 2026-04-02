@@ -1,7 +1,9 @@
+import Message from '../../components/Message';
+
 function TimeCounter() {
     return (
         <>
-            <h4 style={{ textAlign: "center" }}>Time Counter is currently under construction</h4>
+            <Message>Time Counter is currently under construction.</Message>
         </>
     )
 }
