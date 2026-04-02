@@ -1,12 +1,27 @@
 footer {
     background-color: var(--primary);
+
+    position: relative;
+    height: 600px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin-top: 5rem;
+}
+
+.footer-fixed {
+    position: fixed;
+    height: 600px;
     width: 100%;
     bottom: 0;
-    padding: 4rem 2rem;
-    margin-top: 5rem;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
 }
 
 .footer-elgroup {
@@ -36,4 +51,37 @@ footer {
 
 .footer-nav a:hover {
     text-decoration: underline;
+}
+
+.footer-author {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-inline: auto;
+    user-select: none;
+
+    width: max-content;
+    height: max-content;
+}
+
+.footer-author:hover {
+    color: var(--secondary);
+    cursor: grab;
+}
+
+.footer-author:active {
+    cursor: grabbing;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4rem;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .footer-elgroup {
+        align-items: center;
+    }
 }
