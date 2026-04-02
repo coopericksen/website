@@ -7,8 +7,8 @@ function Footer() {
     const dragConstraintRef = useRef(null);
     
     return(
-        <footer ref={dragConstraintRef}>
-            <div className="footer-fixed">
+        <footer>
+            <div className="footer-fixed" ref={dragConstraintRef}>
                 <div className="footer-content">
                     <div className='footer-elgroup'>
                         <h4>Links</h4>
