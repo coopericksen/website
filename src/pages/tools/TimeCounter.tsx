@@ -1,7 +1,7 @@
 function TimeCounter() {
     return (
         <>
-            <h1>Time Counter!!!</h1>
+            <h4 style={{ textAlign: "center" }}>Time Counter is currently under construction</h4>
         </>
     )
 }

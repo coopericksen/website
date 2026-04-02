@@ -4,6 +4,7 @@ import IndexPage from './pages/IndexPage';
 import ToolsPage from './pages/ToolsPage';
 import ToolPage from './pages/ToolPage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectPage from './pages/ProjectPage';
 import AboutPage from './pages/AboutPage';
 
 import './styles/App.css';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tools/:toolId" element={<ToolPage />} />
 
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/:projectId" element={<ProjectPage />} />
 
         <Route path="/about" element={<AboutPage />} />
       </Routes>
