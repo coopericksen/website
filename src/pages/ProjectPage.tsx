@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 
+import Title from '../components/Title';
 import Nav from '../components/Nav';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -24,6 +25,8 @@ function ProjectPage() {
 
     return (
         <>
+            <Title>{project.title} - Cooper Ericksen</Title>
+
             <Nav />
 
             <Banner title={project.title} />

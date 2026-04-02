@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 
+import Title from '../components/Title';
 import Nav from '../components/Nav';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
@@ -30,6 +31,8 @@ function ProjectsPage() {
 
     return (
         <>
+            <Title>Projects - Cooper Ericksen</Title>
+
             <Nav />
 
             <Banner title="Projects" />

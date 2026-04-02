@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 
+import Title from '../components/Title';
 import Nav from '../components/Nav';
 import WelcomeBanner from '../components/WelcomeBanner';
 import LiveClock from '../components/LiveClock';
@@ -19,6 +20,8 @@ function IndexPage() {
 
     return (
         <>
+            <Title>Home - Cooper Ericksen</Title>
+
             <Nav />
             <WelcomeBanner />
 
