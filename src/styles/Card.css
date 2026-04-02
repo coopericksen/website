@@ -6,8 +6,16 @@
     margin: 1rem;
 
     text-decoration: none;
+    max-width: 100%;
 }
 
 .card:hover {
     border: 2px solid var(--text);
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
 }

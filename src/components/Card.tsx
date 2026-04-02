@@ -25,8 +25,8 @@ function Card(props: Project) {
             variants={card_motion}
             whileHover={{ scale: 1.05, y: -20, rotate: 2 }}
         >
-            <h1>{props.title}</h1>
-            <h5>{props.description}</h5>
+            <h4>{props.title}</h4>
+            <p>{props.description}</p>
         </motion.a>
     )
 }
