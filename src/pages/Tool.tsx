@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 
+import NotFound from '../pages/NotFound';
 import Title from '../components/Title';
 import Nav from '../components/Nav';
 import Banner from '../components/Banner';
@@ -14,10 +15,7 @@ function ProjectPage() {
 
     if (!tool) {
         return (
-            <>
-                <h1>Error 404</h1>
-                <h2>Unable to find {toolId}</h2>
-            </>
+            <NotFound />
         );
     }
 
