@@ -10,7 +10,7 @@ export default [
     },
     {
         title: "Flabby Bird",
-        description: "A tool for creating countdowns to and from events.",
+        description: "This big bird can somehow still fly through pipes.",
         href: "/projects/flabby-bird",
         component: FlabbyBird
     }
