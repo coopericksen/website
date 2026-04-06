@@ -1,58 +1,37 @@
 import { motion } from 'motion/react';
+import { Nav_Variants, Nav_Link_Variants, Nav_Link_Hover } from '../variants/variants';
 
 import '../styles/Nav.css';
 
+const nav_links = [
+    {
+        text: '',
+        href: '/',
+        logo: true
+    },
+    {
+        text: 'Home',
+        href: '/'
+    },
+    {
+        text: 'Tools',
+        href: '/tools'
+    },
+    {
+        text: 'Projects',
+        href: '/projects'
+    },
+    {
+        text: 'About',
+        href: '/about'
+    },
+]
+
 function Nav() {
-
-    const nav_motion = {
-        hidden: { y: -50 },
-        visible: { 
-            y: 0,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.2
-            }
-        },
-    };
-
-    const nav_link_motion = {
-        hidden: {
-            scale: 0,
-            y: -50
-        },
-        visible: {
-            scale: 1,
-            y: 0
-        }
-    }
-
-    const nav_links = [
-        {
-            text: '',
-            href: '/',
-            logo: true
-        },
-        {
-            text: 'Home',
-            href: '/'
-        },
-        {
-            text: 'Tools',
-            href: '/tools'
-        },
-        {
-            text: 'Projects',
-            href: '/projects'
-        },
-        {
-            text: 'About',
-            href: '/about'
-        },
-    ]
 
     return (
         <motion.nav 
-            variants={nav_motion} 
+            variants={Nav_Variants} 
             initial="hidden" 
             animate="visible"
         >
@@ -64,8 +43,8 @@ function Nav() {
                         id={element.text === "Home" ? "nav-home-link" : undefined}
                         
                         key={index}
-                        variants={nav_link_motion}
-                        whileHover={{ scale: 1.2, y: -5 }}
+                        variants={Nav_Link_Variants}
+                        whileHover={Nav_Link_Hover}
                     >
                         {element.text}
                         {element.logo ? <img id="nav-logo" src='/logo.png' alt="coopericksen's logo" /> : null}

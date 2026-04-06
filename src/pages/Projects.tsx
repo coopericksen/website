@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Container_Variants } from '../variants/variants';
 
 import Title from '../components/Title';
 import Nav from '../components/Nav';
@@ -18,17 +19,6 @@ function ProjectsPage() {
         )
     });
 
-    const card_container_motion = {
-        hidden: { opacity: 0 },
-        visible: { 
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 1.4
-            }
-        },
-    };
-
     return (
         <>
             <Title>Projects - Cooper Ericksen</Title>
@@ -40,7 +30,7 @@ function ProjectsPage() {
             <motion.section 
                 className='card-grid'
                 
-                variants={card_container_motion}
+                variants={Container_Variants}
                 initial="hidden"
                 whileInView="visible"
             >

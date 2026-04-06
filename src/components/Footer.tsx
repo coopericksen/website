@@ -33,12 +33,6 @@ function Footer() {
                     
                     drag
                     dragConstraints={dragConstraintRef}
-                    // dragConstraints={{
-                    //     top: -50,
-                    //     right: 80,
-                    //     bottom: 50,
-                    //     left: -80
-                    // }}
                     dragElastic={0}
                 >
                     coopericksen.com

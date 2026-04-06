@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Container_Variants } from '../variants/variants';
 
 import Title from '../components/Title';
 import Nav from '../components/Nav';
@@ -7,16 +8,6 @@ import LiveClock from '../components/LiveClock';
 import Footer from '../components/Footer';
 
 function IndexPage() {
-    const LiveClock_container_motion = {
-        hidden: { opacity: 0 },
-        visible: { 
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 1.4
-            }
-        },
-    }
 
     return (
         <>
@@ -26,7 +17,7 @@ function IndexPage() {
             <WelcomeBanner />
 
             <motion.section
-                variants={LiveClock_container_motion}
+                variants={Container_Variants}
                 initial="hidden"
                 whileInView="visible"
             >

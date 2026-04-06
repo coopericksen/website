@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 
+import { Card_Variants, Card_Hover } from '../variants/variants';
+
 import '../styles/LiveClock.css';
 
 function LiveClock() {
@@ -37,23 +39,13 @@ function LiveClock() {
     const timeOutput = new Date(time).toLocaleTimeString('en-US', { hour12: false }) + ":" + getMilliseconds();
     const dateOutput = new Date(time).toDateString();
 
-    const LiveClock_motion = {
-        hidden: {
-            scale: 0,
-            y: -50
-        },
-        visible: {
-            scale: 1,
-            y: 0
-        }
-    }
 
     return (
         <motion.div 
             className="live-clock"
 
-            variants={LiveClock_motion}
-            whileHover={{ scale: 1.05, y: -20, rotate: 2}}
+            variants={Card_Variants}
+            whileHover={Card_Hover}
         >
             <h3 className="live-clock-label">Current Time:</h3>
 
