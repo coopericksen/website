@@ -30,6 +30,7 @@ function App() {
       </Routes>
 
       <Analytics />
+      <SpeedInsights />
     </BrowserRouter>
   )
 }
