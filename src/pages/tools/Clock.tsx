@@ -19,7 +19,8 @@ function Clock() {
     const frame = useRef<number | null>(null);
 
     useEffect(() => {
-        const update = () => {
+
+        const update = (now: number) => {
             setNow(new Date);
             frame.current = requestAnimationFrame(update);
         }
@@ -28,7 +29,7 @@ function Clock() {
 
         return () => cancelAnimationFrame(frame.current!);
         
-    });
+    }, []);
 
     const milliseconds = now.getMilliseconds();
     const seconds = now.getSeconds() + (milliseconds / 1000);

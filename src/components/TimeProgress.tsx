@@ -21,7 +21,7 @@ function TimeProgress(props: TimeProgressProps) {
             whileHover={Card_Hover}
         >
             <h3>{props.label}</h3>
-            <p>{(props.value * 100).toFixed(props.decimals)}%</p>
+            <h4>{(props.value * 100).toFixed(props.decimals)}%</h4>
             <progress value={props.value}></progress>
             
 
