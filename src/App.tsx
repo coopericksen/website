@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/next";
 
 import IndexPage from './pages/Index';
 import ToolsPage from './pages/Tools';
@@ -26,6 +27,8 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Analytics />
     </BrowserRouter>
   )
 }
