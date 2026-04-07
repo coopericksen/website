@@ -42,9 +42,22 @@ function Clock() {
     const dayProgress = hours / 24;
     const monthProgress = days / daysInMonth(now.getFullYear(), now.getMonth() + 1);
 
-    const startOfYear = new Date(now.getFullYear(), 0, 1);
-    const startOfNextYear = new Date(now.getFullYear() + 1, 0, 1);
-    const yearProgress = (now.getTime() - startOfYear.getTime()) / (startOfNextYear.getTime() - startOfYear.getTime());
+    function calcYearProgress(year1: number, year2: number) {
+        const startOfYear1 = new Date(year1, 0, 1);
+        const startOfYear2 = new Date(year2, 0, 1);
+        return (now.getTime() - startOfYear1.getTime()) / (startOfYear2.getTime() - startOfYear1.getTime());
+    }
+
+    const yearProgress = calcYearProgress(now.getFullYear(), now.getFullYear() + 1);
+
+    const firstYearOfDecade = now.getFullYear() - now.getFullYear() % 10;
+    const decadeProgress = calcYearProgress(firstYearOfDecade, firstYearOfDecade + 10);
+
+    const firstYearOfCentury = now.getFullYear() - now.getFullYear() % 100;
+    const centuryProgress = calcYearProgress(firstYearOfCentury, firstYearOfCentury + 100);
+
+    const firstYearOfMillenium = now.getFullYear() - now.getFullYear() % 1000;
+    const milleniumProgress = calcYearProgress(firstYearOfMillenium, firstYearOfMillenium + 1000);
 
     return (
         <>
@@ -61,6 +74,9 @@ function Clock() {
                     <TimeProgress label="Day Progress" value={dayProgress} decimals={4}/>
                     <TimeProgress label="Month Progress" value={monthProgress} decimals={5}/>
                     <TimeProgress label="Year Progress" value={yearProgress} decimals={6}/>
+                    <TimeProgress label="Decade Progress" value={decadeProgress} decimals={7}/>
+                    <TimeProgress label="Century Progress" value={centuryProgress} decimals={8}/>
+                    <TimeProgress label="Millenium Progress" value={milleniumProgress} decimals={9}/>
                 </div>
             </motion.section>
         </>
