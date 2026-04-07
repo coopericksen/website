@@ -1,8 +1,7 @@
 .time-progress {
-    padding: 1rem;
     background-color: var(--primary);
 
-    width: max-content;
+    flex-grow: 1;
     margin-inline: auto;
     text-align: center;
     padding: 2rem 5rem;
@@ -16,6 +15,10 @@
 .time-progress:hover {
     color: var(--secondary);
     border: 2px solid var(--secondary);
+}
+
+progress {
+    width: 100%;
 }
 
 @media (max-width: 600px) {

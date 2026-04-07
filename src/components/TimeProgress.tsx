@@ -1,11 +1,16 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 
 import { Card_Variants, Card_Hover } from '../variants/variants';
 
 import '../styles/TimeProgress.css';
 
-function TimeProgress({ children } : { children : React.ReactNode }) {
+interface TimeProgressProps {
+    label: string;
+    value: number;
+    decimals: number;
+}
+
+function TimeProgress(props: TimeProgressProps) {
     
 
     return (
@@ -15,7 +20,11 @@ function TimeProgress({ children } : { children : React.ReactNode }) {
             variants={Card_Variants}
             whileHover={Card_Hover}
         >
-            {children}
+            <h3>{props.label}</h3>
+            <p>{(props.value * 100).toFixed(props.decimals)}%</p>
+            <progress value={props.value}></progress>
+            
+
         </motion.div>
     )
 }
