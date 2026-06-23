@@ -50,8 +50,8 @@ function LiveClock() {
             <h3 className="live-clock-label">Current Time:</h3>
 
             <div className="live-clock-div">
+                <h4 className="live-clock-date">{dateOutput},</h4>
                 <h4 className="live-clock-time">{timeOutput}</h4>
-                <h4 className="live-clock-date">{dateOutput}</h4>
             </div>
         </motion.div>
     )

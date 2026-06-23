@@ -49,6 +49,6 @@ export const Card_Variants = {
 
 export const Card_Hover = {
     scale: 1.05,
-    y: -20,
-    rotate: 2
+    y: -10,
+    // rotate: 2
 }
